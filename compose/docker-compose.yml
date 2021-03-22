@@ -1,0 +1,11 @@
+version: '2'
+services:
+    learning-compose:
+        build: ./sample_flask/
+        depends_on:
+            - redis
+        ports:
+            - 8181:5000
+    redis:
+        image: redis
+
